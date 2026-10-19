@@ -3,3 +3,9 @@
 	email = kamble.joushva@gmail.com
 [init]
 	defaultBranch = master
+[credential "https://github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !gh auth git-credential
