@@ -1,13 +1,10 @@
--- Gruvbox Material (dark, hard)
+-- Miasma
 return {
-  "sainnhe/gruvbox-material",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    vim.g.gruvbox_material_background = "hard"
-    vim.g.gruvbox_material_foreground = "material"
-    vim.g.gruvbox_material_better_performance = 1
-    vim.opt.background = "dark"
-    vim.cmd.colorscheme("gruvbox-material")
-  end,
+	"xero/miasma.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.opt.background = "dark"
+		vim.cmd.colorscheme("miasma")
+	end,
 }

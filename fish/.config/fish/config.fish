@@ -16,53 +16,54 @@ if status is-interactive
     end
     type -q nvim; and alias vi nvim
 
-    # Palette
-    set -l red    ee5a52
-    set -l teal   51b8a1
-    set -l green  63be54
-    set -l lime   aac035
-    set -l fg     d4be98
-    set -l gray   928374
-    set -l dim    665c54
-    set -l bg1    3c3836
+    # Palette (Miasma, matches the starship prompt)
+    set -l terracotta b36d43
+    set -l gold       c9a554
+    set -l olive      78824b
+    set -l green      5f875f
+    set -l sand       d7c483
+    set -l fg         c2c2b0
+    set -l gray       666666
+    set -l brown      685742
+    set -l bg1        444444
 
     set -g fish_color_normal         $fg
     set -g fish_color_command        $green
-    set -g fish_color_keyword        $red
-    set -g fish_color_quote          $lime
-    set -g fish_color_redirection    $teal
-    set -g fish_color_end            $teal
-    set -g fish_color_error          $red
+    set -g fish_color_keyword        $terracotta
+    set -g fish_color_quote          $gold
+    set -g fish_color_redirection    $sand
+    set -g fish_color_end            $sand
+    set -g fish_color_error          $terracotta
     set -g fish_color_param          $fg
-    set -g fish_color_option         $teal
-    set -g fish_color_operator       $teal
-    set -g fish_color_escape         $teal
-    set -g fish_color_comment        $gray
-    set -g fish_color_autosuggestion $dim
+    set -g fish_color_option         $olive
+    set -g fish_color_operator       $sand
+    set -g fish_color_escape         $sand
+    set -g fish_color_comment        $brown
+    set -g fish_color_autosuggestion $gray
     set -g fish_color_valid_path     --underline
     set -g fish_color_match          --background=$bg1
     set -g fish_color_selection      --background=$bg1
-    set -g fish_color_search_match   --background=$dim
+    set -g fish_color_search_match   --background=$gray
     set -g fish_color_history_current --bold
     set -g fish_color_cancel         $gray
 
-    set -g fish_color_cwd            $teal
-    set -g fish_color_cwd_root       $red
+    set -g fish_color_cwd            $gold
+    set -g fish_color_cwd_root       $terracotta
     set -g fish_color_user           $green
-    set -g fish_color_host           $lime
-    set -g fish_color_host_remote    $lime
-    set -g fish_color_status         $red
+    set -g fish_color_host           $olive
+    set -g fish_color_host_remote    $olive
+    set -g fish_color_status         $terracotta
 
     set -g fish_pager_color_progress               $gray
-    set -g fish_pager_color_prefix                 $teal --bold --underline
+    set -g fish_pager_color_prefix                 $gold --bold --underline
     set -g fish_pager_color_completion             $fg
     set -g fish_pager_color_description            $gray
     set -g fish_pager_color_selected_background    --background=$bg1
-    set -g fish_pager_color_selected_prefix        $teal --bold --underline
+    set -g fish_pager_color_selected_prefix        $gold --bold --underline
     set -g fish_pager_color_selected_completion    $fg
     set -g fish_pager_color_selected_description   $gray
 
-    set -gx FZF_DEFAULT_OPTS "--color=fg:#$fg,bg:-1,hl:#$green,fg+:#$fg,bg+:#$bg1,hl+:#$green,info:#$lime,prompt:#$red,pointer:#$red,marker:#$teal,spinner:#$teal,header:#$gray,border:#$dim"
+    set -gx FZF_DEFAULT_OPTS "--color=fg:#$fg,bg:-1,hl:#$gold,fg+:#$fg,bg+:#$bg1,hl+:#$gold,info:#$olive,prompt:#$terracotta,pointer:#$terracotta,marker:#$green,spinner:#$green,header:#$gray,border:#$gray"
 end
 
 # Main editor
