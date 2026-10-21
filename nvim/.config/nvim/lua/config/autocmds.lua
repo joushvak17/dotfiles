@@ -20,20 +20,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Trim whitespace and format on save
-local format_group = vim.api.nvim_create_augroup("FormatOnSaveGroup", { clear = true })
+-- Trim whitespace on save
+local trim_group = vim.api.nvim_create_augroup("TrimOnSaveGroup", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
-  group = format_group,
+  group = trim_group,
   callback = function()
     local ok, trailspace = pcall(require, "mini.trailspace")
     if ok then
       trailspace.trim()
     end
-    local efm = vim.lsp.get_clients({ name = "efm", bufnr = 0 })
-    if vim.tbl_isempty(efm) then
-      return
-    end
-    vim.lsp.buf.format({ name = "efm", timeout_ms = 2000 })
   end,
 })
 

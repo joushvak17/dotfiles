@@ -9,6 +9,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.showmode = false
 vim.opt.pumheight = 10
 vim.opt.pumblend = 10
+vim.opt.winborder = "rounded"
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·" }
 
