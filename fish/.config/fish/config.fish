@@ -68,3 +68,17 @@ end
 
 # Main editor
 set -gx EDITOR (type -q nvim; and echo nvim; or echo vim)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/jjk339/miniconda3/bin/conda
+    eval /home/jjk339/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/jjk339/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/jjk339/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/jjk339/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
