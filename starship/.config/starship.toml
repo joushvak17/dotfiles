@@ -1,0 +1,197 @@
+# Global Settings
+scan_timeout = 100
+command_timeout = 500
+add_newline = false
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_seg1)\
+$os\
+$username\
+[](bg:color_seg2 fg:color_seg1)\
+$directory\
+[](fg:color_seg2 bg:color_seg3)\
+$git_branch\
+$git_status\
+[](fg:color_seg3 bg:color_seg4)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$bun\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_seg4 bg:color_bg3)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_bg3 bg:color_bg1)\
+$time\
+[ ](fg:color_bg1)\
+$line_break$character"""
+
+palette = 'miasma'
+
+[palettes.miasma]
+color_fg0 = '#c2c2b0'    # theme foreground
+color_dark = '#222222'   # theme background, for text on the bright blocks
+color_bg1 = '#444444'    # dark block behind the time
+color_bg3 = '#666666'    # theme gray (color8)
+
+# Prompt blocks, left to right: an autumn gradient, warm to cool
+color_seg1 = '#b36d43'   # terracotta  os / username
+color_seg2 = '#c9a554'   # gold        directory
+color_seg3 = '#78824b'   # olive       git
+color_seg4 = '#5f875f'   # green       languages
+color_docker = '#d7c483' # sand        docker / conda text
+
+# Prompt character (the theme's red is a dim brown, so errors use terracotta)
+color_green = '#5f875f'
+color_red = '#b36d43'
+color_purple = '#c9a554'
+
+[os]
+disabled = true
+style = "bg:color_seg1 fg:color_dark"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:color_seg1 fg:color_dark"
+style_root = "bg:color_seg1 fg:color_dark"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_dark bg:color_seg2"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_seg3"
+format = '[[ $symbol $branch ](fg:color_dark bg:color_seg3)]($style)'
+
+[git_status]
+style = "bg:color_seg3"
+format = '[[($all_status$ahead_behind )](fg:color_dark bg:color_seg3)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[java]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_seg4"
+format = '[[ $symbol( $version) ](fg:color_dark bg:color_seg4)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg:color_docker bg:color_bg3)]($style)'
+
+[conda]
+style = "bg:color_bg3"
+format = '[[ $symbol( $environment) ](fg:color_docker bg:color_bg3)]($style)'
+
+[pixi]
+style = "bg:color_bg3"
+format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[time]
+disabled = false
+use_12hr = true
+style = "bg:color_bg1"
+format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_seg2)'
