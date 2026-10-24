@@ -56,12 +56,12 @@ vim.opt.spelllang = { "en" }
 
 -- Cursor shape
 vim.opt.guicursor = {
-  "n-v-c:block",
-  "i-ci-ve:ver25",
-  "r-cr:hor20",
-  "o:hor50",
-  "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
-  "sm:block-blinkwait175-blinkoff150-blinkon175",
+	"n-v-c:block",
+	"i-ci-ve:ver25",
+	"r-cr:hor20",
+	"o:hor50",
+	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
+	"sm:block-blinkwait175-blinkoff150-blinkon175",
 }
 
 -- Folding
@@ -73,3 +73,6 @@ vim.opt.foldlevel = 99
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
 vim.opt.synmaxcol = 300
+
+-- Filetypes
+vim.g.asmsyntax = "nasm"
