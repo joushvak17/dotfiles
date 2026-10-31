@@ -32,7 +32,7 @@ require("lazy").setup({
 		},
 	},
 	install = {
-		colorscheme = { "miasma", "habamax" },
+		colorscheme = { "everforest", "habamax" },
 	},
 	checker = { enabled = true },
 })

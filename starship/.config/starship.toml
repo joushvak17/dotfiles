@@ -34,25 +34,25 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
-palette = 'miasma'
+palette = 'everforest'
 
-[palettes.miasma]
-color_fg0 = '#c2c2b0'    # theme foreground
-color_dark = '#222222'   # theme background, for text on the bright blocks
-color_bg1 = '#444444'    # dark block behind the time
-color_bg3 = '#666666'    # theme gray (color8)
+[palettes.everforest]
+color_fg0 = '#d3c6aa'    # theme foreground
+color_dark = '#1e2326'   # darkest bg, for text on the bright blocks
+color_bg1 = '#374247'    # dark block behind the time
+color_bg3 = '#414b50'    # dark block behind docker / conda
 
-# Prompt blocks, left to right: an autumn gradient, warm to cool
-color_seg1 = '#b36d43'   # terracotta  os / username
-color_seg2 = '#c9a554'   # gold        directory
-color_seg3 = '#78824b'   # olive       git
-color_seg4 = '#5f875f'   # green       languages
-color_docker = '#d7c483' # sand        docker / conda text
+# Prompt blocks, left to right
+color_seg1 = '#e67e80'   # red     os / username
+color_seg2 = '#7fbbb3'   # blue    directory
+color_seg3 = '#83c092'   # aqua    git
+color_seg4 = '#a7c080'   # green   languages
+color_docker = '#7fbbb3' # blue    docker / conda text
 
-# Prompt character (the theme's red is a dim brown, so errors use terracotta)
-color_green = '#5f875f'
-color_red = '#b36d43'
-color_purple = '#c9a554'
+# Prompt character
+color_green = '#a7c080'
+color_red = '#e67e80'
+color_purple = '#d699b6'
 
 [os]
 disabled = true
