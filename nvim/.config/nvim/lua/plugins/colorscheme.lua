@@ -1,12 +1,11 @@
--- Everforest (dark, hard)
+-- Kanagawa (dragon)
 return {
-	"sainnhe/everforest",
+	"rebelot/kanagawa.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.g.everforest_background = "hard"
-		vim.g.everforest_better_performance = 1
+		require("kanagawa").setup({ theme = "dragon", background = { dark = "dragon" } })
 		vim.opt.background = "dark"
-		vim.cmd.colorscheme("everforest")
+		vim.cmd.colorscheme("kanagawa-dragon")
 	end,
 }

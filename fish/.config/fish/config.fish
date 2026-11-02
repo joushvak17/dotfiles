@@ -16,15 +16,15 @@ if status is-interactive
     end
     type -q nvim; and alias vi nvim
 
-    # Palette (Everforest dark hard, matches the starship prompt)
-    set -l red    e67e80
-    set -l blue   7fbbb3
-    set -l green  a7c080
-    set -l aqua   83c092
-    set -l fg     d3c6aa
-    set -l gray   859289
-    set -l dim    7a8478
-    set -l bg1    374247
+    # Palette (Kanagawa dragon, matches the starship prompt)
+    set -l red    c4746e
+    set -l blue   8ba4b0
+    set -l green  87a987
+    set -l aqua   8ea4a2
+    set -l fg     c5c9c5
+    set -l gray   737c73
+    set -l dim    625e5a
+    set -l bg1    393836
 
     set -g fish_color_normal         $fg
     set -g fish_color_command        $green
@@ -80,3 +80,4 @@ else
     end
 end
 # <<< conda initialize <<<
+

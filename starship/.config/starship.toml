@@ -34,25 +34,25 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
-palette = 'everforest'
+palette = 'kanagawa_dragon'
 
-[palettes.everforest]
-color_fg0 = '#d3c6aa'    # theme foreground
-color_dark = '#1e2326'   # darkest bg, for text on the bright blocks
-color_bg1 = '#374247'    # dark block behind the time
-color_bg3 = '#414b50'    # dark block behind docker / conda
+[palettes.kanagawa_dragon]
+color_fg0 = '#c5c9c5'    # dragonWhite, theme foreground
+color_dark = '#0d0c0c'   # dragonBlack0, text on the bright blocks
+color_bg1 = '#282727'    # dark block behind the time
+color_bg3 = '#393836'    # dark block behind docker / conda
 
 # Prompt blocks, left to right
-color_seg1 = '#e67e80'   # red     os / username
-color_seg2 = '#7fbbb3'   # blue    directory
-color_seg3 = '#83c092'   # aqua    git
-color_seg4 = '#a7c080'   # green   languages
-color_docker = '#7fbbb3' # blue    docker / conda text
+color_seg1 = '#c4746e'   # dragonRed    os / username
+color_seg2 = '#949fb5'   # dragonTeal   directory
+color_seg3 = '#8ea4a2'   # dragonAqua   git
+color_seg4 = '#87a987'   # dragonGreen  languages
+color_docker = '#8ba4b0' # dragonBlue2  docker / conda text
 
 # Prompt character
-color_green = '#a7c080'
-color_red = '#e67e80'
-color_purple = '#d699b6'
+color_green = '#87a987'
+color_red = '#c4746e'
+color_purple = '#a292a3'
 
 [os]
 disabled = true
