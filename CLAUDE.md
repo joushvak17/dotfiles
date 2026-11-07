@@ -19,13 +19,18 @@ package whose contents mirror `$HOME`:
 
 ## Theme
 
-Current theme: **Kanagawa Wave**. A theme switch must touch every one of these:
+Current theme: **Token Meridian (dark)** from
+https://github.com/ThorstenRhau/token, which ships ready-made ports in `contrib/`
+(kitty, tmux, starship, fish, fzf) to take colours from. A theme switch must touch every one of these:
 
 1. `kitty/.config/kitty/current-theme.conf`: the full palette. The block between
    `BEGIN_KITTY_THEME`/`END_KITTY_THEME` in `kitty.conf` is managed by
    `kitty +kitten themes`; keep that structure.
 2. `nvim/.config/nvim/lua/plugins/colorscheme.lua`: plugin, setup and `colorscheme`.
-   `plugins/lualine.lua` sets `theme = "kanagawa"`; update it too if the plugin changes.
+   Also `plugins/lualine.lua` (`theme = ...`) and the install fallback in
+   `config/lazy.lua` (`install.colorscheme`). Install new plugins with
+   `nvim --headless "+Lazy! install" +qa` (not `sync`, which updates everything),
+   then `Lazy! clean` to drop the old theme; both change `lazy-lock.json`.
 3. `tmux/.tmux.conf`: only the `# Colors` block of `%hidden` variables
    (BG, BG_ALT, FG, MUTED, BORDER, ACCENT, HIGHLIGHT). Nothing else in the file
    should hold a hex code. `%hidden` needs tmux ≥ 3.1.
@@ -36,9 +41,8 @@ Current theme: **Kanagawa Wave**. A theme switch must touch every one of these:
 Take hex values from the kitty theme file so all tools agree, and map colours
 by role/hue (bg→bg, green accent→green accent), not by position.
 
-Past theme commits said "across all configs" but missed tmux, and
-**starship + fish are still on Kanagawa Dragon** (`#c5c9c5`, `#87a987`, …),
-not Wave. Fix those the next time the theme is touched.
+Keep each tool's structure and change only its colour block; the upstream
+files are a colour source, not drop-in replacements.
 
 ## Verifying changes
 
@@ -53,9 +57,11 @@ Check a config before reporting it done, without touching the live session:
   ```
 - **fish**: `fish -n fish/.config/fish/config.fish`
 - **nvim**: `nvim --headless +qa` should exit without errors
-- **kitty**: `kitty --debug-config`
+- **kitty**: no headless check (`--debug-config` doesn't exist in this kitty); review the diff
+- **starship**: `STARSHIP_CONFIG=starship/.config/starship.toml starship prompt`
 
-Reload in a live session: tmux `C-a r` (prefix is `C-a`), fish `exec fish`.
+Reload in a live session: tmux `C-a r` (prefix is `C-a`), fish `exec fish`,
+kitty `ctrl+shift+F5`, nvim restart.
 
 ## Git workflow
 
@@ -66,8 +72,8 @@ Reload in a live session: tmux `C-a r` (prefix is `C-a`), fish `exec fish`.
 - The user sometimes amends and force-pushes their own commits. If a commit
   hash changes between steps, re-check `git log` rather than assuming
   something went wrong.
-- `nvim/.config/nvim/lazy-lock.json` changes whenever plugins update. Leave it
-  out of unrelated commits unless told otherwise.
+- `nvim/.config/nvim/lazy-lock.json` changes whenever plugins update. It belongs
+  in theme commits that swap the nvim colorscheme plugin.
 
 ## Don't "fix" these
 

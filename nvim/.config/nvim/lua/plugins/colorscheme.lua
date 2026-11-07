@@ -1,11 +1,26 @@
--- Kanagawa (wave)
+-- Token (meridian)
 return {
-	"rebelot/kanagawa.nvim",
+	"ThorstenRhau/token",
+	version = "*",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("kanagawa").setup({ theme = "wave", background = { dark = "wave" } })
-		vim.opt.background = "dark"
-		vim.cmd.colorscheme("kanagawa-wave")
+		require("token").setup({
+			-- Highlight integrations are opt-in; these match the installed plugins
+			plugins = {
+				blink = true,
+				dap_ui = true,
+				diffview = true,
+				fzf = true,
+				gitsigns = true,
+				lazy = true,
+				mason = true,
+				mini = true,
+				nvimtree = true,
+				whichkey = true,
+			},
+		})
+		vim.o.background = "dark"
+		vim.cmd.colorscheme("token-meridian")
 	end,
 }
