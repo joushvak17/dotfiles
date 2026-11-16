@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "token-meridian",
+				theme = "jellybeans",
 				icons_enabled = true,
 				section_separators = { left = "", right = "" },
 				component_separators = "|",

@@ -19,9 +19,11 @@ package whose contents mirror `$HOME`:
 
 ## Theme
 
-Current theme: **Token Meridian (dark)** from
-https://github.com/ThorstenRhau/token, which ships ready-made ports in `contrib/`
-(kitty, tmux, starship, fish, fzf) to take colours from. A theme switch must touch every one of these:
+Current theme: **Jellybeans (dark)** from
+https://github.com/nanotech/jellybeans.vim. Upstream is vim-only: colours come
+from `colors/jellybeans.vim` (highlight groups) and `ansi-term-colors.txt`
+(the 8 normal terminal colours); there are no ready-made ports for the other
+tools. A theme switch must touch every one of these:
 
 1. `kitty/.config/kitty/current-theme.conf`: the full palette. The block between
    `BEGIN_KITTY_THEME`/`END_KITTY_THEME` in `kitty.conf` is managed by

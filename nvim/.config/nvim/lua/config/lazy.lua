@@ -32,7 +32,7 @@ require("lazy").setup({
 		},
 	},
 	install = {
-		colorscheme = { "token-meridian", "habamax" },
+		colorscheme = { "jellybeans", "habamax" },
 	},
 	checker = { enabled = true },
 })

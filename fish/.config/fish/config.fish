@@ -16,15 +16,15 @@ if status is-interactive
     end
     type -q nvim; and alias vi nvim
 
-    # Palette (Token Meridian dark, matches the starship prompt)
-    set -l red    dd8384
-    set -l blue   7cc1dc
-    set -l green  8cbb62
-    set -l aqua   cf9c70
-    set -l fg     c9c0b1
-    set -l gray   a69c91
-    set -l dim    6b6b67
-    set -l bg1    3c3b36
+    # Palette (Jellybeans dark, matches the starship prompt)
+    set -l red    cf6a4c
+    set -l blue   8fbfdc
+    set -l green  99ad6a
+    set -l aqua   ffb964
+    set -l fg     e8e8d3
+    set -l gray   888888
+    set -l dim    606060
+    set -l bg1    404040
 
     set -g fish_color_normal         $fg
     set -g fish_color_command        $green
