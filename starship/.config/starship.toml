@@ -34,25 +34,25 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
-palette = 'jellybeans_dark'
+palette = 'tender'
 
-[palettes.jellybeans_dark]
-color_fg0 = '#e8e8d3'    # fg, theme foreground
-color_dark = '#151515'   # bg, text on the bright blocks
-color_bg1 = '#404040'    # selection, dark block behind the time
-color_bg3 = '#302028'    # search bg, dark block behind docker / conda
+[palettes.tender]
+color_fg0 = '#eeeeee'    # fg, theme foreground
+color_dark = '#282828'   # bg, text on the bright blocks
+color_bg1 = '#293b44'    # selection, dark block behind the time
+color_bg3 = '#335261'    # pmenu bg, dark block behind docker / conda
 
 # Prompt blocks, left to right
-color_seg1 = '#cf6a4c'   # red     os / username
-color_seg2 = '#8fbfdc'   # blue    directory
-color_seg3 = '#ffb964'   # orange  git
-color_seg4 = '#99ad6a'   # green   languages
-color_docker = '#8fbfdc' # blue    docker / conda text
+color_seg1 = '#f43753'   # red     os / username
+color_seg2 = '#b3deef'   # blue    directory
+color_seg3 = '#ffc24b'   # yellow  git
+color_seg4 = '#c9d05c'   # green   languages
+color_docker = '#73cef4' # cyan    docker / conda text
 
 # Prompt character
-color_green = '#99ad6a'
-color_red = '#cf6a4c'
-color_purple = '#c6b6ee'
+color_green = '#c9d05c'
+color_red = '#f43753'
+color_purple = '#d3b987' # tender has no purple; its magenta slot is sand
 
 [os]
 disabled = true
